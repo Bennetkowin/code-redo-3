@@ -1,0 +1,121 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e433db;
+  color: #42d0e2;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #39eec7;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #9a2fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px #b47ab61a;
+}
+
+/* Film List */
+#films {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 20px;
+  padding: 0;
+  list-style: none;
+  border-right: 1px solid #30c7a6;
+}
+
+.film.item {
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  background: #2fd345;
+  border: 1px solid #49d9ec;
+  border-radius: 4px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.film.item:hover {
+  background: #26c776;
+  transform: translateX(5px);
+}
+
+.film.item.active {
+  background: #b1e22b;
+  font-weight: bold;
+}
+
+/* Film Details */
+#film-details {
+  flex: 2;
+  min-width: 500px;
+}
+
+#poster {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+#title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #8faf38;
+}
+
+#runtime, #showtime, #ticket-num {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+#film-info {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Buttons */
+button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  #films {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+  }
+}
